@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data structures and agorithms notes</title>
+    <style>
+        h1,h2,h3,h4,h5{
+            text-align: center;
+            text-transform: uppercase;
+            color: blue;
+        }
+        p::first-letter{
+            text-transform:uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>JAVASCRIPT ALGORITHMS</h1>
+    <p>An algorithm is a set of well-defined instructions to solve a particuar problem</p>
+    <h5>Recipe analogy</h5>
+    <p>you have (ingredients) follow the (recipe) and make a (tasty dish)</p>
+    <p>in programming consider algorithm to add two numbers the two numbers are the ingredients (input) steps to adding the two numbers is using + operator to return a value (recipe) the output is the sum of the two numbers (tasty dish) </p>
+    <p>input -> algorithm -> output</p>
+
+    <h2>characteristics of an algorithm</h2>
+    <ul>
+        <li>should have well defined inputs and outputs</li>
+        <li>each step should be clear and unambiguos</li>
+        <li>it should be language independent i.e can be used with any programming language</li>
+
+    </ul>
+    <h2>why learn algorithm?</h2>
+    <p>As a developer you are going to come across problems that you need to solve</p>
+    <p>learning algorithms translates to learning different techniques to efficiently solve those problems</p>
+    <p>one problem can be solved in many ways using different algorithms</p>
+    <p>every algorithm comes with its own tradeoffs when it comes to performance</p>
+
+    <h2>Algorithms analysis</h2>
+    <p>How do we measure algorithms?</p>
+    <p>ex.there are multiple algorithms to sort a list of numbers</p>
+    <p>how do you analyse which one of them is the most efficient algorithm?</p>
+    <p>generally when we talk about performance, we use an absolute measure</p>
+    <p>The absolute running time of an algorithm cannot be predicted, since it depends on a number of factors</p>
+    <ol>
+        <li>programming language used to implement the algorithm</li>
+        <li>the computer the program runs on</li>
+        <li>other programs running at the same time</li>
+        <li>quality of the operating system</li>
+    </ol>
+    <p>keeping this in mind, we evaluate the performance of an algorithm <b>in terms of its input size</b></p>
+    <p>evaluation is of two types</p>
+    <p><b>time complexity</b> - amount of time taken by an algorithm to run, as a function of input size </p>
+    <p><b>space complexity</b> - amount of memory taken by an algorithm to run, as a function of input size</p>
+    <br><br>
+
+    <p>by evaluating against the inut size, the analysis is not only machine independent but the comparison is also more appropriate</p>
+    <p>there is no one solution that works every single time. it is always goood to know multiple ways to solve the problem and use the best solution, given your constraints</p>
+    <p>if your app need to be quick and has plenty of memry to work with, you dont need to worry about space complexity</p>
+    <p>if you have very little memory to work witth, you should pick a solution that is relatively slower but needs less space</p>
+
+  <h2>how to represent complexity</h2>
+  <p>we use Asymptotic notations <br>
+    -Asymptotic notations are mathematical tools to represent time and space complexity
+</p>
+<ol>
+    <li>Big-O notation (O - notation) - worst case complexity </li>
+    <li>Omega notation (&Omega; - notation) - best case complexity </li>
+    <li>Theta notation (&Theta; - notation ) - average case complexity</li>
+</ol>
+
+<h2>Big-O Notation</h2>
+<p>worst case complexity of an algorithm is represented using the Big-O notation </p>
+<p>it describes the complexity of an algorithm using algebraic terms</p>
+<p>it has two important characteristics</p>
+<ul>
+    <li>it is expressed in terms of the input</li>
+    <li>it focuses on the bigger picture without getting caught up in the minute details</li>
+</ul> 
+
+<p>in the example:</p>
+<p>
+    function add(n){<br>
+        sum = 0; ----------------- 1 (executed once) <br>
+        for(let i=1; 1<=n; i++){<br>
+            sum+=i -----------------4 (executed 4 times)
+        }<br>
+        return sum ---------------  1 (executed once)<br>
+    }<br>
+    n = 4
+    Big-O is (n+2)
+    <p>
+        if <br>
+        n= 100 -------------->> 100+2<br>
+        n= 1000 -------------->> 1000+2<br>
+        n= 10000 ------------>> 10000+2<br>
+        .<br>
+        .<br>
+        .<br>
+        n = 10000000 ------------>> 1000000+2<br>
+        at this point 2 becomes insignificant so instead of having n+2 we remain with n since it contributes the most to the total value and not the additional 2 extra steps
+    </p>
+    <p>from our example above the Big-O time complexity IS REPRESNTED BY <b>O(n) -linear.</b>  This means that as the size of the input increases so will the time complexity increase</p>
+    <p>most of the time you come across a loop in your algorithm you can say that the time complexity is O(n) linear</p>
+
+    <h3>BIG-O calculation</h3>
+    <p><b>Example 1</b></p>
+    <p>function sumation(n){<br>
+        return (n* (n+1))/2 <br>
+    }
+    </p>
+    <p>the time compexity is <b>O(1) - constant</b></p>
+    <p>---------------------------------------------------------------------------------------------------------</p><br>
+   <p><b>Example 2:</b></p>
+    <p>
+        for(i=1; i<=n; i++){<br>
+            for(j=1; j<=i; j++){<br>
+                //some code
+            }
+        }<br>
+    </p>
+    <p>Time compexity is <b>O(n^2) - quadratic</b><br>
+    3n^2 + 5n + 1</p>
+</p>
+
+<p>If there are 3 loops nested time complexity will be <b> O(n^3) - Cubic</b></p>
+<p>If the input size reduces by half every iteration time complexity will be <b> O(log n) - logarithmic</b></p>
+
+<h2>SPACE COMPEXITY</h2>
+<p>The idea remains the same as time complexity.if the algorithm doesnt need extra memory or the memory needed does not depend on the input size the space complexity is<br> <b> O(1) - constant. </b><br>
+<b>we also have O(n) - linear space complexity</b><br>
+<b>and O(logn) - logarithmic space complexity</b></p>
+
+<h2>Big O trend</h2>
+<p>visit this site : <a href="https://www.bigocheatsheet.com/">click here</a> to see how input size affects performance </p>
+<p>You will notice that the performance on <b>O(log n) - logarithmic, O(1) - constant is good compared to O(n!) -factorial which is horrible and should be avoided if possible</b></p>
+
+<h5>few points to note</h5>
+<p>multipe algorrithms exist for the same problem and there is no one right solution. Different agorithms work well under different contraints</p>
+</body>
+</html>
