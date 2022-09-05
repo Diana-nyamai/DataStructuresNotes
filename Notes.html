@@ -138,5 +138,59 @@
 
 <h5>few points to note</h5>
 <p>multipe algorrithms exist for the same problem and there is no one right solution. Different agorithms work well under different contraints</p>
+<p>The same algorithm with the same programming language can be implemented in different ways</p>
+<p>when writing programs at work dont lose sight of the big picture. Rather than writing clever code, write code that is simple to read and maintain</p>
+
+<h2>objects -big-o</h2>
+<p>an object is a collection of key value pairs</p>
+<p><b>example:</b></p>
+<p>
+    const person = {<br>
+        firstname: 'Diana',<br>
+        lastname: 'nyamai'<br>
+    }
+</p>
+<p>if you want to remove or insert a new property the time complexity is <b>O(1) - constant</b> </p>
+<p>if you want to access a value given a key the time complexity is <b>O(1) - constant</b></p>
+<p>if you want to search a property in an object the time complexity is <b>O(n) - linear</b></p>
+<p>using methods on objects will have time complexity of O(n) - linear</p>
+ <ul>
+    <li>insert - O(1)</li>
+    <li>remove - O(1)</li>
+    <li>access - O(1)</li>
+    <li>search - O(n)</li>
+    <li>object.keys() - O(n)</li>
+    <li>object.values() - O(n)</li>
+    <li>object.entries() - O(n)</li>
+ </ul>
+
+ <h2>array - big-o</h2>
+ <p>array is an ordered collection of values</p>
+ <p><b>example</b></p>
+ <p>const arr = [2,4,6,8]</p>
+ <p>
+    <ul>
+        <li>insert/remove at the end - O(1)</li>
+        <li>insert/remove at the beginning - O(n) this is beacuse the index has to be reset in every remaining element in the array</li>
+        <li>access- O(1) this is because fetching an element in position 0 is no difference from fetching at one in position 100</li>
+        <li>search - O(n)</li>
+        <li>push/pop - O(1)</li>
+        <li>shift/unshift/concat/slice/splice - O(n)</li>
+        <li>forEach/map/filter/reduce - O(n)</li>
+
+
+    </ul>
+ </p>
+
+ <h2>Math Algorithms</h2>
+ <p><b>problem:</b> Given a number 'n' find the first 'n' eements of the fibonacci sequence</p>
+ <p>in mathematics, the fibonacci seqquence is the sequence in which each number is the sum of the preceding ones</p>
+ <p>the first two numbers in the sequence are 0 and 1. </p>
+ <ul>
+    <li>fibonacci(2) = [0,1]</li>
+    <li>fibonacci(3) = [0,1,1]</li>
+    <li>fibonacci(7) = [0,1,1,2,3,5,8]</li>
+</ul>
+
 </body>
 </html>
