@@ -288,5 +288,32 @@
     <li>if the target is less than the middle element, binary search left half of the array</li>
     <li>if the target is greater than the middle element, binary search right half of the array</li>
 </ul>
+
+<h2>sorting algorithms</h2>
+<ul>
+    <li>bubble sort</li>
+    <li>insertion sort</li>
+    <li>quick sort</li>
+    <li>merge sort</li>
+</ul>
+<p><b>bubble sort idea</b></p>
+<p>compare adjacent elements in the array and swap the positions if they are not in the intended order</p>
+<p>repeat the instruction as you step through each element in the array</p>
+<p>once you step through the whole array with no swaps, the arrayy is sorted.</p>
+
+<p><b>bubble sort example</b></p>
+<p>
+    [-6,20,8,-2,4]<br>
+    [-6,20,8,-2,4] ---> [-6,<b>8,20,</b>8,-2,4] swap since 20>8 <br>
+    [-6,8,20,-2,4] ---> [-6,8,<b>-2,20</b>,4] swap since 20> -2 <br>
+    [-6,8,-2,20,4] ---> [-6,8,-2,<b>4,20</b>] swap since 20 > 4 <br>
+    end of array. Elements swapped? yes? Repeat the comparison<br>
+    [-6,8,-2,4,20] ---> [-6,<b>-2,8</b>,4,20] swap since 8 > -2<br>
+    [-6,-2,8,4,20] ---> [-6,-2,<b>4,8</b>,20] swap since 8>4 <br>
+    [-6,-2,4,8,20] <br>
+    end of array. elements swapped? yes? repeat comparison
+    [-6,-2,4,8,20] [-6,-2,4,8,20]  [-6,-2,4,8,20]  [-6,-2,4,8,20]<br>
+    end of array. elements swapped? No? Array is sorted
+</p>
 </body>
 </html>
