@@ -279,12 +279,12 @@
 </ul>
 <p><b>binary search</b></p>
 <p>use binary search when the array given is sorted</p>
-<p><b>Problem:</b> - Given a sorted array of 'n' elements and target element 't', find the inde of the 't' in the array. Return -1 if the target element is not found</p>
+<p><b>Problem:</b> - Given a sorted array of 'n' elements and target element 't', find the index of the 't' in the array. Return -1 if the target element is not found</p>
 
 <p><b>Binary search pseudocode</b></p>
 <ul>
     <li>if the array is empty return -1 as the element cannot be found</li>
-    <li>if the array has elements, find the middle element in the array. If the target is equak to the middle element index.</li>
+    <li>if the array has elements, find the middle element in the array. If the target is equal to the middle element index.</li>
     <li>if the target is less than the middle element, binary search left half of the array</li>
     <li>if the target is greater than the middle element, binary search right half of the array</li>
 </ul>
@@ -311,7 +311,7 @@
     [-6,8,-2,4,20] ---> [-6,<b>-2,8</b>,4,20] swap since 8 > -2<br>
     [-6,-2,8,4,20] ---> [-6,-2,<b>4,8</b>,20] swap since 8>4 <br>
     [-6,-2,4,8,20] <br>
-    end of array. elements swapped? yes? repeat comparison
+    end of array. elements swapped? yes? repeat comparison<br>
     [-6,-2,4,8,20] [-6,-2,4,8,20]  [-6,-2,4,8,20]  [-6,-2,4,8,20]<br>
     end of array. elements swapped? No? Array is sorted
 </p>
