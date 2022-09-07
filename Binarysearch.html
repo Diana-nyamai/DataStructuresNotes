@@ -9,13 +9,27 @@
 <body>
     <script>
         function binarySearch(n , target){
-            for(let i=0; i<n.length; i++){
-                
+            let leftindex = 0
+            let rightindex = n.length - 1
+
+            while(leftindex <= rightindex){
+                let middleindex = Math.floor((leftindex + rightindex)/2)
+                if(target === n[middleindex]){
+                    return middleindex
+                }
+                if(target < n[middleindex]){
+                   rightindex = middleindex -1
+                }
+                else{
+                    leftindex = middleindex + 1
+                }
             }
+            return -1
         }
         document.write(binarySearch([2,3,4,5], 5) + "<br>")
         document.write(binarySearch([2,3,4,5], 3) + "<br>")
         document.write(binarySearch([2,3,4,5], 1) + "<br>")
+        // BIG-O IS O(log n)
     </script>
 </body>
 </html>
