@@ -1,45 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power of two</title>
-</head>
-<body>
-    <script>
-          document.write("================================================method 1<br>")
-        function poweroftwo(n){
-           if(n<1){
-            return false
-           }
-           while(n > 1){
-              if(n%2 !== 0){
-                return false
-              }
-              n = n/2
-           }
-           return true
-    
+
+    console.log("================================================method 1\n")
+function poweroftwo(n){
+    if(n<1){
+    return false
+    }
+    while(n > 1){
+        if(n%2 !== 0){
+        return false
         }
-        document.write(poweroftwo(3) + "<br>")
-        document.write(poweroftwo(4) + "<br>")
-        document.write(poweroftwo(9) + "<br>")
-        // the big O is O(logn)
+        n = n/2
+    }
+    return true
 
-        // Method 2
-        document.write("================================================method 2<br>")
+}
+console.log(poweroftwo(3) + "\n")
+console.log(poweroftwo(4) + "\n")
+console.log(poweroftwo(9) + "\n")
+// the big O is O(logn)
 
-        function powof2(n){
-            if(n < 1){
-                return false;
-            }
-            return (n & (n-1) ) === 0
-        }
-        document.write(powof2(9) + "<br>")
-        document.write(powof2(4) + "<br>")
-        document.write(powof2(16) + "<br>")
+// Method 2
+console.log("================================================method 2\n")
 
-    </script>
-</body>
-</html>
+function powof2(n){
+    if(n < 1){
+        return false;
+    }
+    return (n & (n-1) ) === 0
+}
+console.log(powof2(9) + "\n")
+console.log(powof2(4) + "\n")
+console.log(powof2(16) + "\n")
+
