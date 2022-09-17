@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factorial</title>
-</head>
-<body>
-    <script>
-        function factorial(n){
-           let res = 1;
-           for(let i=1; i<=n; i++){
-            res*=i
-           }
-           return res
-        }
-        document.write(factorial(4)+ "<br>");
-        document.write(factorial(8) + "<br>");
-        // the big -O is linear time complexity O(n)
-        
-    </script>
-</body>
-</html>
+function factorial(n){
+    let res = 1;
+    for(let i=1; i<=n; i++){
+    res*=i
+    }
+    return res
+}
+console.log(factorial(4)+ "\n");
+console.log(factorial(8) + "\n");
+// the big -O is linear time complexity O(n)
+
