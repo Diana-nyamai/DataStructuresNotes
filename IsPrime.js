@@ -1,30 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IS NUMBER PRIME?</title>
-</head>
-<body>
-    <script>
-        function isPrime(n){
-          if(n<2){
-            return false
-          }
-          for(let i=2; i<n; i++){
-            if(n%i === 0){
-                return false
-            }
-          }
-          return true;
-        }
-        document.write(isPrime(5) + "<br>")
-        document.write(isPrime(10) + "<br>")
+function isPrime(n){
+  if(n<2){
+    return false
+  }
+  for(let i=2; i<n; i++){
+    if(n%i === 0){
+        return false
+    }
+  }
+  return true;
+}
+console.log(isPrime(5) + "\n")
+console.log(isPrime(10) + "\n")
 
-        document.write("=======================================<br>")
-        var a = 1%2
-        document.write(a)
-    </script>
-</body>
-</html>
+console.log("=======================================\n")
+var a = 1%2
+console.log(a)
